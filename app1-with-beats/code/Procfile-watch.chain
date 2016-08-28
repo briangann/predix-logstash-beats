@@ -1,0 +1,3 @@
+web: ./worker-watch.sh
+chisel: ./chisel-watch.sh
+filebeat: ./filebeat-watch.sh

@@ -1,0 +1,23 @@
+filebeat:
+  prospectors:
+    -
+      paths:
+        - "-"
+      input_type: stdin
+      document_type: stdin
+      fields_under_root: true
+      fields:
+        level: info
+        beat_method: "piped data"
+        hostname: "app1-with-beats-bg.run.aws-usw02-pr.ice.predix.io"
+        host: "app1-with-beats-bg.run.aws-usw02-pr.ice.predix.io"
+        "@source_host": "app1-with-beats-bg.run.aws-usw02-pr.ice.predix.io"
+output:
+  logstash:
+    hosts: ["0.0.0.0:5000"]
+#  console:
+#    # Pretty print json event
+#    pretty: false
+
+shipper:
+  name: "app1-with-beats-bg.run.aws-usw02-pr.ice.predix.io"

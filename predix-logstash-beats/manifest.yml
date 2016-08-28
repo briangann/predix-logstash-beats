@@ -1,0 +1,11 @@
+---
+applications:
+ - name: logstash-beats-bg
+   instances: 1
+   buildpack: binary_buildpack
+   memory: 1024M
+   stack: cflinuxfs2
+   path: code
+   timeout: 120
+   env:
+     PYTHONIOENCODING: "utf-8"

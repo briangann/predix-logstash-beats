@@ -1,0 +1,21 @@
+filebeat:
+  prospectors:
+    -
+      paths:
+        - "/home/vcap/app/mylogs/*"
+      input_type: log
+      fields_under_root: true
+      fields:
+        level: info
+        hostname: "app1-with-beats-bg.run.aws-usw02-pr.ice.predix.io"
+        host: "app1-with-beats-bg.run.aws-usw02-pr.ice.predix.io"
+        "@source_host": "app1-with-beats-bg.run.aws-usw02-pr.ice.predix.io"
+output:
+  logstash:
+    hosts: ["0.0.0.0:5000"]
+  console:
+    # Pretty print json event
+    pretty: false
+
+shipper:
+  name: "app1-with-beats-bg.run.aws-usw02-pr.ice.predix.io"

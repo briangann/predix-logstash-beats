@@ -1,0 +1,1 @@
+web: PORT=$PORT honcho -f Procfile.chain start

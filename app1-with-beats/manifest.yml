@@ -1,0 +1,11 @@
+---
+applications:
+ - name: app1-with-beats-bg
+   instances: 1
+   buildpack: python_buildpack
+   memory: 512M
+   stack: cflinuxfs2
+   path: code
+   timeout: 120
+   env:
+     PYTHONIOENCODING: "utf-8"
